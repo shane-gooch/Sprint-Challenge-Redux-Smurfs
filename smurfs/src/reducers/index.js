@@ -27,6 +27,10 @@ import
   FETCH_FAIL,
   ADD_START,
   ADD_SUCCESS,
+  // UPDATE_START,
+  // UPDATE_SUCCESS
+  // DELETE_START,
+  // DELETE_SUCCESS
    }
    from '../actions';
 
@@ -74,6 +78,35 @@ import
           addingSmurf: false,
           smurfs: action.payload
         }
+      // case UPDATE_START:
+      //     return {
+      //       updatingSmurf: true,
+      //       error: ''
+      //     }
+      // case UPDATE_SUCCESS:
+      //     return {
+      //       updatingSmurf: false,
+      //       error: '',
+      //       smurfs: action.payload
+           
+      //     }
+        // case DELETE_START:
+        // return {
+        //   deletingSmurf: true,
+        //   error: ''
+        // }
+        // case DELETE_SUCCESS:
+        //   return {
+        //     deletingSmurf: false,
+        //     error: '',
+        //     smurfs: state.smurfs.filter(smurf => {
+        //       if(action.payload === smurf.id) {
+        //         return(
+                      // ...smurfs
+        //         )
+        //       }
+        //     })
+        //   }
        default:
          return state;
    }

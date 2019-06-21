@@ -35,12 +35,44 @@ export const ADD_SUCCESS = 'ADD_SUCCESS';
 
 export const addSmurf = smurf => dispatch => {
   console.log(smurf)
-  dispatch({ type: FETCH_START});
+  dispatch({ type: ADD_START});
   axios 
     .post('http://localhost:3333/smurfs', smurf)
     .then(res => {
       console.log(res.data)
-      dispatch({ type: FETCH_SUCCESS, payload: res.data })
+      dispatch({ type: ADD_SUCCESS, payload: res.data })
     })
     .catch(err => console.log(err))
 }
+
+// export const UPDATE_START = 'UPDATE_START'
+// export const UPDATE_SUCCESS = 'UPDATE_SUCCESS';
+
+
+// export const updateSmurf = id => dispatch => {
+//   console.log(id)
+//   dispatch({ type: UPDATE_START })
+//   axios 
+//     .put(`http://localhost:3333/smurfs/${id}`)
+//     .then(res => {
+//       console.log(res);
+//       dispatch({ type: UPDATE_SUCCESS, payload: res.data,id })
+//     })
+// }
+
+
+// export const DELETE_START = 'DELETE_START'
+// export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+
+// export const updateSmurf = id => dispatch => {
+//   console.log(id)
+//   dispatch({ type: DELETE_START })
+//   axios 
+//     .put(`http://localhost:3333/smurfs/${id}`)
+//     .then(res => {
+//       console.log(res);
+//       dispatch({ type: DELETE_SUCCESS, payload: res.data,id })
+//     })
+// }
+
+
